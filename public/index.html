@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>La Jícara - Acceso</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container layout-auth">
+    <!-- Columna izquierda: branding -->
+    <section class="brand-panel">
+      <div class="brand-panel-inner">
+        <img
+          src="/img/la-jicara-logo.png"
+          alt="Logo La Jícara"
+          class="brand-logo-img"
+        />
+        <h1 class="brand-title">La Jícara</h1>
+        <p class="brand-subtitle">
+          Pozol, cacao y productos típicos de Chiapas, listos para llegar a tu casa.
+        </p>
+        <p class="brand-tagline">
+          Inicia sesión o crea tu cuenta para comenzar a ordenar.
+        </p>
+      </div>
+    </section>
+
+    <!-- Columna derecha: tarjetas de login/registro -->
+    <section class="auth-panel">
+      <!-- Mensajes globales -->
+      <div id="message" class="message"></div>
+
+      <!-- ===== LOGIN ===== -->
+      <section id="loginSection" class="card">
+        <h2 class="card-title">Iniciar sesión</h2>
+
+        <form id="loginForm" class="form">
+          <label class="field-label">
+            <span>Correo electrónico</span>
+            <div class="input-wrapper">
+              <span class="input-icon"></span>
+              <input
+                type="email"
+                id="loginEmail"
+                required
+                placeholder="tucorreo@example.com"
+              />
+            </div>
+          </label>
+
+          <label class="field-label">
+            <span>Contraseña</span>
+            <div class="input-wrapper">
+              <span class="input-icon"></span>
+              <input
+                type="password"
+                id="loginPassword"
+                required
+                placeholder="••••••••"
+              />
+            </div>
+          </label>
+
+          <button type="submit">Iniciar sesión</button>
+        </form>
+
+        <p class="switch">
+          ¿Aún no tienes cuenta?
+          <a href="#" id="goToRegister">Crear cuenta</a>
+        </p>
+      </section>
+
+      <!-- ===== REGISTRO ===== -->
+      <section id="registerSection" class="card hidden">
+        <h2 class="card-title">Crear cuenta</h2>
+
+        <form id="registerForm" class="form">
+          <label class="field-label">
+            <span>Nombre completo</span>
+            <div class="input-wrapper">
+              <span class="input-icon"></span>
+              <input
+                type="text"
+                id="registerNombre"
+                required
+                placeholder="Tu nombre"
+              />
+            </div>
+          </label>
+
+          <label class="field-label">
+            <span>Correo electrónico</span>
+            <div class="input-wrapper">
+              <span class="input-icon"></span>
+              <input
+                type="email"
+                id="registerEmail"
+                required
+                placeholder="tucorreo@example.com"
+              />
+            </div>
+          </label>
+
+          <label class="field-label">
+            <span>Contraseña</span>
+            <div class="input-wrapper">
+              <span class="input-icon"></span>
+              <input
+                type="password"
+                id="registerPassword"
+                required
+                placeholder="Mínimo 8 caracteres"
+              />
+            </div>
+          </label>
+
+          <button type="submit">Crear cuenta</button>
+        </form>
+
+        <p class="switch">
+          ¿Ya tienes una cuenta?
+          <a href="#" id="goToLogin">Iniciar sesión</a>
+        </p>
+      </section>
+
+      <!-- ===== WELCOME ===== -->
+      <section id="welcomeSection" class="card card-welcome hidden">
+        <div class="welcome-icon">
+          <img
+            src="/img/la-jicara-logo.png"
+            alt="Logo La Jícara"
+            class="welcome-logo-img"
+          />
+        </div>
+        <h2 class="welcome-title">Bienvenido a La Jícara</h2>
+        <p id="welcomeText" class="welcome-text"></p>
+        <p class="welcome-subtext">
+          Tu sesión se ha iniciado correctamente.
+          Muy pronto podrás gestionar tus pedidos de pozol, cacao, solubles y suvenires desde esta plataforma.
+        </p>
+        <button id="logoutBtn" class="secondary">Cerrar sesión</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

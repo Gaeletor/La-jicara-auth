@@ -1,0 +1,320 @@
+/* Layout general */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6e7cf;
+  color: #2c1810;
+}
+
+/* Header superior */
+.admin-header {
+  height: 64px;
+  background: linear-gradient(90deg, #6b2f16, #b45309);
+  color: #fef9c3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  box-shadow: 0 10px 25px rgba(59, 31, 14, 0.35);
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.admin-logo {
+  width: 42px;
+  height: auto;
+  border-radius: 12px;
+  background: #fef9c3;
+  padding: 4px;
+}
+
+.admin-brand-text span {
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.admin-brand-text small {
+  display: block;
+  font-size: 0.75rem;
+  color: #fde68a;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.admin-user button {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #fef9c3;
+  background: transparent;
+  color: #fef9c3;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.admin-user button:hover {
+  background: #fef9c3;
+  color: #3b1f0e;
+}
+
+/* Contenido principal */
+.admin-main {
+  max-width: 1120px;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1rem;
+}
+
+/* Mensajes */
+.admin-message {
+  min-height: 1.4rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.admin-message.error {
+  color: #b91c1c;
+}
+
+.admin-message.success {
+  color: #15803d;
+}
+
+/* Menú horizontal */
+.admin-nav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  border-radius: 999px;
+  padding: 0.25rem;
+  background: #fdf3e3;
+  margin-bottom: 1.2rem;
+}
+
+.tab-btn {
+  border: none;
+  background: transparent;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #7c6a5a;
+  border-radius: 999px;
+}
+
+.tab-btn.active {
+  color: #fef9c3;
+  font-weight: 600;
+  background: linear-gradient(135deg, #b45309, #92400e);
+}
+
+/* Secciones */
+.admin-section {
+  display: none;
+}
+
+.admin-section.active {
+  display: block;
+}
+
+/* Header de sección */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.section-header h2 {
+  font-size: 1.05rem;
+  color: #6b2f16;
+}
+
+/* Botones */
+button.primary {
+  background: #b45309;
+  color: #ffffff;
+  border-radius: 999px;
+  border: none;
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button.primary:hover {
+  background: #92400e;
+}
+
+button.secondary {
+  background: #6b4f3a;
+  color: #ffffff;
+  border-radius: 999px;
+  border: none;
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button.secondary:hover {
+  background: #4b3424;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-sm.edit {
+  background: #f3e4d4;
+}
+
+.btn-sm.edit:hover {
+  background: #e8d5c2;
+}
+
+.btn-sm.delete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-sm.delete:hover {
+  background: #fecaca;
+}
+
+/* Tabla */
+.table-wrapper {
+  background: #ffffff;
+  border-radius: 0.6rem;
+  border: 1px solid #e5d5c4;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(59, 31, 14, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+thead {
+  background: #fdf6ec;
+}
+
+th,
+td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #e5d5c4;
+  text-align: left;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+  background: #fbf4ea;
+}
+
+/* Modales */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.modal-dialog {
+  position: relative;
+  background: #ffffff;
+  border-radius: 0.9rem;
+  padding: 1.25rem 1.5rem;
+  max-width: 430px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(59, 31, 14, 0.4);
+  z-index: 10;
+}
+
+.modal-dialog h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #6b2f16;
+}
+
+/* Formularios de modal */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.modal-form label {
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.modal-form input,
+.modal-form textarea,
+.modal-form select {
+  border-radius: 0.5rem;
+  border: 1px solid #d6c2ae;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.modal-form textarea {
+  resize: vertical;
+}
+
+/* Inline checkbox */
+.inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.inline-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Acciones de modal */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
