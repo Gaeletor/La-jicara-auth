@@ -123,14 +123,6 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `url_imagen` VARCHAR(255) DEFAULT NULL,
   `activo` TINYINT(1) NOT NULL DEFAULT 1,
 
-  -- Opcionales nutricionales (Healthy Food)
-  `calorias` INT DEFAULT NULL,
-  `proteinas` INT DEFAULT NULL,
-  `carbohidratos` INT DEFAULT NULL,
-  `grasas` INT DEFAULT NULL,
-  `es_vegano` TINYINT(1) NOT NULL DEFAULT 0,
-  `es_sin_gluten` TINYINT(1) NOT NULL DEFAULT 0,
-
   `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
